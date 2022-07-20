@@ -1,0 +1,11 @@
+//cf vidéo : grafikart - préprocesseurs sass - les variables 5/11
+$small: 768px!default;
+$medium: 992px!default;
+$large: 1920px!default;
+
+$medium-up: "only screen and (min-width: #{$small})";
+$format-mobile: "only screen and (max-width: #{$small})";// 768px
+$format-tablette: "only screen and (min-width: #{$medium})";
+$format-tablette: "only screen and (max-width: #{$medium})";// 992px
+$large-up: "only screen and (min-width: #{$large})";
+$format-desktop: "only screen and (max-width: #{$large})";// 1920px

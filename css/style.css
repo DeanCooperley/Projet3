@@ -1,11 +1,10 @@
 @font-face {
     font-family: 'Roboto', sans-serif;
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Shrikhand', sans-serif;
     src: url('https://fonts.google.com/share?selection.family=Roboto%7CShrikhand');
 }
 
 * {
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Roboto', sans-serif; 
 }
 
