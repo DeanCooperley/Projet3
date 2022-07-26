@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="sass/css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet"> 
@@ -15,32 +15,34 @@
         <div id="blocPage">
 
             <header>
-                <div class="logohmyfood">
+                <div class="h__logo">
                     <img src="images/logo/ohmyfood@2x.svg" alt="Logo ohmyfood">
                 </div>
             </header>
 
-            <!--Section recherche-->
-            <section>
-                <div class="recherche">
-                    <form class="" method="post" action="Fictif.php">
-                        <label class="" for="recherche">
-                            <span class="icone"><i class="fa-solid fa-location-dot fa-lg"></i></span>        
-                            <input class="textRech" type="search" name="q" id="recherche" placeholder="Paris, Belleville" size="20" maxlength="150"/>
-                        </label>
-                    </form>
-                </div>
+            <!--Section search-->
+            <section class="search">
+                <form class="search__form" method="post" action="Fictif.php">
+                    <label class="search__label" for="recherche">
+                        <span class="search__label--pad"><i class="fa-solid fa-location-dot"></i></span>        
+                        <input class="search__input--border search__input--opa search__input--moz" type="search" name="q" id="recherche" placeholder="Paris, Belleville" size="20" maxlength="150"/>
+                    </label>
+                </form>
+            </section>
+
+            <!--Section explore-->
+            <section class="explore">
                 <h1>Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
                 <div class="btn">
                     <a href="#">
-                        <span class="explore">Explorer nos restaurants</span>
+                        <span class="">Explorer nos restaurants</span>
                     </a>
                 </div>
             </section>
 
-            <!--Section fonctionnement-->
-            <section>
+            <!--Section functioning-->
+            <section class="functioning">
                 <h2>Fonctionnement</h2>
                 <ol>
                     <li>
@@ -65,11 +67,11 @@
             </section>
 
             <!--Section resto-->
-            <section>
+            <section class="four">
                 <h2>Restaurants</h2>
                 <!--1ère carte-->
-                <a href="#" class="card">
-                    <span class="frame">
+                <a href="#" class="four__card">
+                    <span class="four__card--frame">
                         <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Assiette de saumon en salade">
                     </span>
                     <span class="text">
@@ -78,8 +80,8 @@
                     </span>
                 </a>
                 <!--2ème carte-->
-                <a href="#" class="card">
-                    <span class="frame">
+                <a href="#" class="four__card">
+                    <span class="four__card--frame">
                         <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Assiette de petits poulpes et encornets, olives, tomate et pommes dauphine">
                     </span>
                     <span class="text">
@@ -88,8 +90,8 @@
                     </span>
                 </a>
                 <!--3ème carte-->
-                <a href="#" class="card">
-                    <span class="frame">
+                <a href="#" class="four__card">
+                    <span class="four__card--frame">
                         <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Assiette d'oeufs pochés sur feuilles d'épinards et toast">
                     </span>
                     <span class="text">
@@ -98,8 +100,8 @@
                     </span>
                 </a>
                 <!--4ème carte-->
-                <a href="#" class="card">
-                    <span class="frame">
+                <a href="#" class="four__card">
+                    <span class="four__card--frame">
                         <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="poisson cuit au court bouillon sur assiette en forme de tuile ">
                     </span>
                     <span class="text">

@@ -1,16 +1,99 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
 $base-font-size: 14px;
 
 @import "libs/minireset.scss";
-@import "libs/variable.scss";
+@import "libs/variables.scss";
 @import "libs/mixins.scss";
 @import "libs/functions.scss";
 @import "libs/responsive.scss";
-
-$primary: #9356DC;
-$secondary: #FF79DA;
-$tertiary: #99E2D0;
 
 body {
     background: #fff;
 }
 
+#blocPage{
+    max-width: 270px;
+    margin: auto;
+}
+
+/*header*/
+header {
+    height: $height + 20px;
+    .h__logo {
+        width: 100%;
+        @include disJ;
+    }
+}
+
+header,
+.search {
+    @include disJ;
+    align-items: center;
+}
+
+/*section search*/
+.search {
+    height: $height;
+    &__form {
+        @include disJ;
+        width: 100%;
+        height: $height;
+    }
+    
+    &__label {
+        width: 100%;
+        @include disJ;
+        
+        &--pad {
+            padding-right: 15px;
+        }
+    }
+    
+    &__input {
+        font-size: $size;
+        &--border {
+            border: 0;
+        }
+        &--opa::placeholder{
+            color: black;
+            font-weight: bold;
+        }
+        &--moz::-moz-placeholder{
+            font-weight: bold;
+            opacity: 1;
+        }
+    }
+}
+
+/*Section explore*/
+.explore {
+    padding: 50px 0;
+    text-align: center;
+    h1 {
+        font-weight: bold;
+        font-size: $size + 10px;
+    }
+}
+
+.four{
+    @include disJ;
+    width: 100%;
+    &__card {
+        width: 100%;
+        &--frame img {
+            @include frame;
+        }
+    }
+}
+
+/*footer*/
+footer {
+
+}
+
+h3 {
+    font-family: 'Shrikhand', cursive;
+}

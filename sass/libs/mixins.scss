@@ -1,0 +1,35 @@
+@mixin dis {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin disC {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@mixin disB {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@mixin disCB {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin disJ {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@mixin frame {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
