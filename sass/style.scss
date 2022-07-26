@@ -14,18 +14,23 @@ body {
     background: #fff;
 }
 
-#blocPage{
+a {
+    color: $colorT;
+}
+
+/*#blocPage{
     max-width: 270px;
     margin: auto;
-}
+}*/
 
 /*header*/
 header {
     height: $height + 20px;
-    .h__logo {
-        width: 100%;
-        @include disJ;
-    }
+}
+    
+.h__logo {
+    width: 100%;
+    @include disJ;
 }
 
 header,
@@ -46,7 +51,7 @@ header,
     &__label {
         width: 100%;
         @include disJ;
-        
+        background-color: $background;
         &--pad {
             padding-right: 15px;
         }
@@ -54,6 +59,7 @@ header,
     
     &__input {
         font-size: $size;
+        background-color: $background;
         &--border {
             border: 0;
         }
@@ -68,16 +74,36 @@ header,
     }
 }
 
+.icone {
+    @include disJC;
+}
+
 /*Section explore*/
 .explore {
     padding: 50px 0;
     text-align: center;
-    h1 {
-        font-weight: bold;
-        font-size: $size + 10px;
+}
+    
+h1 {
+    font-weight: bold;
+    font-size: $size + 10px;
+}
+
+.btnExp {
+    border-radius: 25px;
+    background: linear-gradient($secondary, $primary);
+    &--style {
+        color: #fff;
     }
 }
 
+/*Section functioning*/
+h2 {
+    font-size: $size + 6px;
+    font-weight: bold;
+}
+
+/*Section resto*/
 .four{
     @include disJ;
     width: 100%;

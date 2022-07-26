@@ -42,16 +42,20 @@ body {
   background: #fff;
 }
 
-#blocPage {
-  max-width: 270px;
-  margin: auto;
+a {
+  color: black;
 }
 
+/*#blocPage{
+    max-width: 270px;
+    margin: auto;
+}*/
 /*header*/
 header {
   height: 70px;
 }
-header .h__logo {
+
+.h__logo {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -82,12 +86,14 @@ header,
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: rgb(235, 235, 235);
 }
 .search__label--pad {
   padding-right: 15px;
 }
 .search__input {
   font-size: 16px;
+  background-color: rgb(235, 235, 235);
 }
 .search__input--border {
   border: 0;
@@ -101,16 +107,39 @@ header,
   opacity: 1;
 }
 
+.icone {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
 /*Section explore*/
 .explore {
   padding: 50px 0;
   text-align: center;
 }
-.explore h1 {
+
+h1 {
   font-weight: bold;
   font-size: 26px;
 }
 
+.btnExp {
+  border-radius: 25px;
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+.btnExp--style {
+  color: #fff;
+}
+
+/*Section functioning*/
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/*Section resto*/
 .four {
   display: flex;
   flex-wrap: wrap;
