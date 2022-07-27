@@ -19,7 +19,9 @@ ol {
 }
 
 a {
+  display: block;
   text-decoration: none;
+  color: black;
 }
 
 *::before,
@@ -42,20 +44,17 @@ body {
   background: #fff;
 }
 
-a {
-  color: black;
+#blocPage {
+  max-width: 768px;
+  margin: auto;
 }
 
-/*#blocPage{
-    max-width: 270px;
-    margin: auto;
-}*/
 /*header*/
 header {
   height: 70px;
 }
 
-.h__logo {
+.logo {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -86,14 +85,14 @@ header,
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(230, 230, 230);
 }
 .search__label--pad {
   padding-right: 15px;
 }
 .search__input {
   font-size: 16px;
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(230, 230, 230);
 }
 .search__input--border {
   border: 0;
@@ -118,6 +117,7 @@ header,
 .explore {
   padding: 50px 0;
   text-align: center;
+  background-color: rgb(243, 243, 243);
 }
 
 h1 {
@@ -125,11 +125,23 @@ h1 {
   font-size: 26px;
 }
 
-.btnExp {
-  border-radius: 25px;
-  background: linear-gradient(#FF79DA, #9356DC);
+.btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
-.btnExp--style {
+.btn--exp {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(to left top, #9356DC, #FF79DA);
+  box-shadow: 1px 3px 12px rgb(162, 162, 162);
+  text-align: center;
   color: #fff;
 }
 

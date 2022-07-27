@@ -4,31 +4,27 @@
 
 $base-font-size: 14px;
 
-@import "libs/minireset.scss";
-@import "libs/variables.scss";
-@import "libs/mixins.scss";
-@import "libs/functions.scss";
-@import "libs/responsive.scss";
+@import "lib/minireset.scss";
+@import "lib/variables.scss";
+@import "lib/mixins.scss";
+@import "lib/functions.scss";
+@import "lib/responsive.scss";
 
 body {
     background: #fff;
 }
 
-a {
-    color: $colorT;
-}
-
-/*#blocPage{
-    max-width: 270px;
+#blocPage{
+    max-width: 768px;
     margin: auto;
-}*/
+}
 
 /*header*/
 header {
     height: $height + 20px;
 }
     
-.h__logo {
+.logo {
     width: 100%;
     @include disJ;
 }
@@ -51,7 +47,7 @@ header,
     &__label {
         width: 100%;
         @include disJ;
-        background-color: $background;
+        background-color: $grey;
         &--pad {
             padding-right: 15px;
         }
@@ -59,7 +55,7 @@ header,
     
     &__input {
         font-size: $size;
-        background-color: $background;
+        background-color: $grey;
         &--border {
             border: 0;
         }
@@ -82,6 +78,7 @@ header,
 .explore {
     padding: 50px 0;
     text-align: center;
+    background-color: $lightgrey;
 }
     
 h1 {
@@ -89,11 +86,18 @@ h1 {
     font-size: $size + 10px;
 }
 
-.btnExp {
+.btn {
+    @include disJC;
+
+    &--exp {
+    @include disJC;
+    width: $width - 40;
+    height: $height;
     border-radius: 25px;
-    background: linear-gradient($secondary, $primary);
-    &--style {
-        color: #fff;
+    background: linear-gradient(to left top, $primary, $secondary);
+    box-shadow: 1px 3px 12px rgb(162, 162, 162);
+    text-align: center;
+    color: #fff;  
     }
 }
 
