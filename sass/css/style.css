@@ -72,6 +72,7 @@ header,
 /*section search*/
 .search {
   height: 50px;
+  border-top: 3px solid rgb(216, 216, 216);
 }
 .search__form {
   display: flex;
@@ -113,30 +114,46 @@ header,
   justify-content: center;
 }
 
+/*sections padding and title*/
+.explore,
+.functioning,
+.four {
+  padding: 50px 0;
+}
+
+.explore h1,
+.functioning h2,
+.four h2 {
+  margin-bottom: 20px;
+}
+
 /*Section explore*/
 .explore {
-  padding: 50px 0;
   text-align: center;
   background-color: rgb(243, 243, 243);
 }
 
 h1 {
   font-weight: bold;
-  font-size: 26px;
+  font-size: 21px;
 }
 
-.btn {
+p {
+  margin-bottom: 35px;
+}
+
+.btn-pink {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
-.btn--exp {
+.btn-pink--exp {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 60%;
+  width: 200px;
   height: 50px;
   border-radius: 25px;
   background: linear-gradient(to left top, #9356DC, #FF79DA);
@@ -151,7 +168,41 @@ h2 {
   font-weight: bold;
 }
 
-/*Section resto*/
+.btn {
+  font-weight: bold;
+}
+.btn ol {
+  counter-reset: numbers;
+}
+
+.functioning li {
+  counter-increment: numbers;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.functioning li::before {
+  content: counter(numbers);
+  background: #9356DC;
+  color: #fff;
+  border-radius: 25px;
+  padding: 0px 5px;
+  margin-right: 15px;
+}
+.functioning li a:hover {
+  background-color: #ae80e5;
+}
+.functioning li a:hover i {
+  color: #9356DC;
+}
+
+.margColor {
+  margin-right: 15px;
+  color: grey;
+}
+
+/*Section four*/
 .four {
   display: flex;
   flex-wrap: wrap;
