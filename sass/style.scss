@@ -38,7 +38,7 @@ header,
 /*section search*/
 .search {
     height: $height;
-    border-top: 3px solid rgb(216, 216, 216);
+    border-top: 3px solid rgb(200, 200, 200);
     &__form {
         @include disJ;
         width: 100%;
@@ -48,7 +48,7 @@ header,
     &__label {
         width: 100%;
         @include disJ;
-        background-color: $grey;
+        background: lighten($grey, 40);
         &--pad {
             padding-right: 15px;
         }
@@ -56,7 +56,7 @@ header,
     
     &__input {
         font-size: $size;
-        background-color: $grey;
+        background: lighten($grey, 40);
         &--border {
             border: 0;
         }
@@ -91,7 +91,7 @@ header,
 /*Section explore*/
 .explore {
     text-align: center;
-    background-color: $lightgrey;
+    background: lighten($grey, 45);
 }
     
 h1 {
@@ -107,14 +107,21 @@ p {
     @include disJC;
 
     &--exp {
-    @include disJC;
-    width: 200px;
-    height: $height;
-    border-radius: 25px;
-    background: linear-gradient(to left top, $primary, $secondary);
-    box-shadow: $shadow;
-    text-align: center;
-    color: #fff;  
+        @include disJC;
+        width: 200px;
+        height: $height;
+        border-radius: 25px;
+        background: linear-gradient(to left top, $primary, $secondary);
+        box-shadow: $shadow;
+        text-align: center;
+        color: #fff;
+        
+        &:hover {
+            background: linear-gradient(
+            to left top,
+            lighten($primary, 7%),
+            lighten($secondary, 7%));  
+        }
     }
 }
 
@@ -126,29 +133,37 @@ h2 {
 
 .btn {
     font-weight: bold;
+    
     ol {
         counter-reset: numbers;
     }
 }
-   
+        
 .functioning li {
     counter-increment: numbers;
     @include disC;
     margin-bottom: $down - 5;
-            
+    position: relative;
+                    
     &::before {
         content: counter(numbers);
+        position: absolute;
         background: $primary;
         color: #fff;
         border-radius: 25px;
-        padding: 0px 5px;
-        margin-right: 15px;
+        padding: 0px 6px;
     }
 
     a {
+        background-color: lighten($grey, 45);
+        border-radius: 25px;
+        padding: 20px 30px;
+        margin-left: 9px;
+        box-shadow: $shadow;
+                
         &:hover {
-            background-color: lighten($primary, 10%);
-
+            background: lighten($primary, 35%);
+                    
             i {
                 color: $primary;
             }
@@ -165,19 +180,57 @@ h2 {
 .four{
     @include disJ;
     width: 100%;
+    height: auto;
+    background: lighten($grey, 45);
     &__card {
         width: 100%;
+        height: 250px;
+        border-radius: 20px;
+        margin-bottom: $down - 5;
         &--frame img {
             @include frame;
+            border-radius: 20px 20px 0 0;
+        }
+    }
+    &__text {
+        @include dis;
+        &--resto {
+            @include disB;
+            width: 100%;
+            font-weight: bold;
         }
     }
 }
 
+.four i {
+    @include disJC;
+    /*position: relative;*/
+    
+    &:hover {
+        /*position: absolute;*/
+        background: linear-gradient($primary, $secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}
+
+.look {
+    position: absolute;
+    right: -9999px;
+}
+
 /*footer*/
 footer {
-
+    background-color: darken($grey, 30);
 }
 
 h3 {
+    padding: 20px;
     font-family: 'Shrikhand', cursive;
+}
+
+footer a,
+h3 {
+    color: #fff;
 }
