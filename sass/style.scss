@@ -120,7 +120,8 @@ p {
             background: linear-gradient(
             to left top,
             lighten($primary, 7%),
-            lighten($secondary, 7%));  
+            lighten($secondary, 7%)); 
+            box-shadow: 1px 3px 12px rgb(113, 113, 113); 
         }
     }
 }
@@ -163,6 +164,7 @@ h2 {
                 
         &:hover {
             background: lighten($primary, 35%);
+            box-shadow: 1px 3px 12px rgb(113, 113, 113);
                     
             i {
                 color: $primary;
@@ -183,10 +185,16 @@ h2 {
     height: auto;
     background: lighten($grey, 45);
     &__card {
+        @include dis;
         width: 100%;
         height: 250px;
+        background-color: #fff;
         border-radius: 20px;
         margin-bottom: $down - 5;
+        &--frame {
+            width: 100%;
+            height: 180px;
+        }
         &--frame img {
             @include frame;
             border-radius: 20px 20px 0 0;
@@ -194,30 +202,54 @@ h2 {
     }
     &__text {
         @include dis;
+        width: 100%;
+        height: 70px;
         &--resto {
             @include disB;
+            // position: relative;
             width: 100%;
             font-weight: bold;
+            // transition: all 650ms;
         }
     }
 }
 
 .four i {
     @include disJC;
-    /*position: relative;*/
-    
+        position: relative;
+        transform: scale(1);
+        transition-property: transform;
+        transition: all 650ms;
+}
+
+.front {
+    position: absolute;
+    z-index: 2;
+    left: 319.6px;
+
     &:hover {
-        /*position: absolute;*/
-        background: linear-gradient($primary, $secondary);
+        background: linear-gradient(transparent);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
+        z-index: 1;
     }
 }
 
-.look {
+.behind {
     position: absolute;
-    right: -9999px;
+    z-index: 1;
+    color: transparent;
+    
+    &:hover {
+        background: linear-gradient($primary, $secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        z-index: 2;
+        transition: all 600ms;
+        transform: scale(1.1);
+        color: transparent;
+    }
 }
 
 /*footer*/

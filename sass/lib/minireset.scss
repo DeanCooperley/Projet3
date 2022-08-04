@@ -14,10 +14,14 @@ ol {
     list-style-type: none;
 }
 
-a, span {
+a {
     display: block;
     text-decoration: none;
     color: black;
+}
+
+span {
+    display: block;
 }
 
 *::before,
