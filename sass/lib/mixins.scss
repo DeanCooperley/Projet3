@@ -40,3 +40,10 @@
     height: 100%;
     object-fit: cover;
 }
+
+@mixin heart {
+    position: absolute;
+    top: 250px;
+    left: 720px;
+    cursor: pointer;
+}

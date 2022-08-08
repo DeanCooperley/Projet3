@@ -127,16 +127,21 @@ p {
 }
 
 /*Section functioning*/
-h2 {
-    font-size: $size + 6px;
-    font-weight: bold;
-}
+.functioning {
 
-.btn {
-    font-weight: bold;
-    
-    ol {
-        counter-reset: numbers;
+    h2 {
+        width: 100%;
+        font-size: $size + 6px;
+        font-weight: bold;
+    }
+
+    .btn {
+        @include disJC;
+        font-weight: bold;
+        
+        ol {
+            counter-reset: numbers;
+        }
     }
 }
         
@@ -180,16 +185,22 @@ h2 {
 
 /*Section restaurant*/
 .restaurant {
-    @include disJ;
+    @include dis;
     width: 100%;
     height: auto;
     background: lighten($grey, 45);
+
+    h2 {
+        font-weight: bold;
+        width: 100%;
+        font-size: $size + 6px;
+    }
 }
 
 .one {
     @include disJ;
-    // position: relative;
     width: 100%;
+    position: relative;
 
     &__card {
         @include dis;
@@ -211,6 +222,7 @@ h2 {
         @include dis;
         width: 100%;
         height: 70px;
+        padding: 15px 0 15px 10px;
         &--resto {
             @include disB;
             width: 100%;
@@ -219,23 +231,34 @@ h2 {
     }
 }
 
-.one i {
-    @include disJC;
-    // position: absolute;
-    // position: relative;
-    transform: scale(1);
-    transition-property: transform;
-    transition: all 750ms;
-    
+.heart {
+    font-size: 30px;
 
-    &:hover {
-        content: "\f004";
-        font-family: FontAwesome;  
-        background: linear-gradient($primary, $secondary);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
+    .front {
+        @include heart;
+
+        &:hover:active {
+            color: transparent;
+        }
     }
+    
+    .behind {
+        @include heart; 
+        transition-property: color;
+        transition: all 1s;
+        color: transparent;
+
+        &:hover {
+            background: linear-gradient(to bottom, $primary, $secondary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            z-index: 2;
+        }
+    }
+}
+
+.one {
+    z-index: 1;
 }
 
 /*footer*/
@@ -246,6 +269,7 @@ footer {
 h3 {
     padding: 20px 0 0 20px;
     font-family: 'Shrikhand', cursive;
+    font-size: $size + 4px;
 }
 
 footer a,
@@ -255,4 +279,12 @@ h3 {
 
 footer nav {
     padding: 20px;
+    
+    li {
+        padding-bottom: 10px;
+    }
+    
+    i {
+        padding-right: 15px;
+    }
 }

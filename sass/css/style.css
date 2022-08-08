@@ -171,15 +171,19 @@ p {
 }
 
 /*Section functioning*/
-h2 {
+.functioning h2 {
+  width: 100%;
   font-size: 22px;
   font-weight: bold;
 }
-
-.btn {
+.functioning .btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   font-weight: bold;
 }
-.btn ol {
+.functioning .btn ol {
   counter-reset: numbers;
 }
 
@@ -223,10 +227,14 @@ h2 {
 .restaurant {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   width: 100%;
   height: auto;
   background: #f3f3f3;
+}
+.restaurant h2 {
+  font-weight: bold;
+  width: 100%;
+  font-size: 22px;
 }
 
 .one {
@@ -234,6 +242,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  position: relative;
 }
 .one__card {
   display: flex;
@@ -259,6 +268,7 @@ h2 {
   flex-wrap: wrap;
   width: 100%;
   height: 70px;
+  padding: 15px 0 15px 10px;
 }
 .one__text--resto {
   display: flex;
@@ -268,22 +278,36 @@ h2 {
   font-weight: bold;
 }
 
-.one i {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  transform: scale(1);
-  transition-property: transform;
-  transition: all 750ms;
+.heart {
+  font-size: 30px;
 }
-.one i:hover {
-  content: "\f004";
-  font-family: FontAwesome;
-  background: linear-gradient(#9356DC, #FF79DA);
+.heart .front {
+  position: absolute;
+  top: 250px;
+  left: 720px;
+  cursor: pointer;
+}
+.heart .front:hover:active {
+  color: transparent;
+}
+.heart .behind {
+  position: absolute;
+  top: 250px;
+  left: 720px;
+  cursor: pointer;
+  transition-property: color;
+  transition: all 1s;
+  color: transparent;
+}
+.heart .behind:hover {
+  background: linear-gradient(to bottom, #9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
+  z-index: 2;
+}
+
+.one {
+  z-index: 1;
 }
 
 /*footer*/
@@ -294,6 +318,7 @@ footer {
 h3 {
   padding: 20px 0 0 20px;
   font-family: "Shrikhand", cursive;
+  font-size: 20px;
 }
 
 footer a,
@@ -303,6 +328,12 @@ h3 {
 
 footer nav {
   padding: 20px;
+}
+footer nav li {
+  padding-bottom: 10px;
+}
+footer nav i {
+  padding-right: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
