@@ -1,0 +1,177 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+$base-font-size: 14px;
+
+@import "lib/minireset.scss";
+@import "lib/variables.scss";
+@import "lib/mixins.scss";
+@import "lib/functions.scss";
+@import "lib/responsive.scss";
+
+body {
+    background: #fff;
+}
+
+#blocPage{
+    max-width: 768px;
+    margin: auto;
+}
+
+/*header*/
+header {
+    @include disJC;
+    height: $height + 20px;
+}
+
+.logo {
+    width: 100%;
+    @include disJ;
+    position: relative;
+
+    & a {
+        position: absolute;
+        top: 4px;
+        left: 20px;
+        font-size: $size + 6px;
+    }
+}
+
+.picture {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/*Section menu*/
+.menu {
+    background-color: lighten($grey, 45);
+    margin-top: -50px;
+    border-radius: 35px 35px 0 0;
+    position: relative;
+    z-index: 1;
+
+    &__title {
+        @include disC;
+
+        h2 {
+            font-family: 'Shrikhand', cursive;
+            font-size: $size + 12px;
+        }
+
+        span {
+            @include disC;
+        }
+    }
+
+    h3 {
+        font-family: 'Roboto', sans-serif;
+        color: black;
+        position: relative;
+
+        .ligne::before {
+            content: "";
+            display: block;
+            position: absolute;
+            border-bottom: 2px solid $tertiary;
+            left: 50%;           
+        }
+    }
+
+    &__heart {
+        @include disJC;
+        position: relative;
+        width: 32px;
+        height: 32px;
+        background-color: transparent;
+        background-color: black;
+        
+        &:hover::before {
+            opacity: 1;
+        }
+    
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            background: linear-gradient(0deg, $primary 0%, $secondary 100%);
+        }
+    }
+    
+    &__effect {
+        @include disJC;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transition-duration: .25s;
+        background-color: lighten($grey, 45);
+        mix-blend-mode: lighten;
+    }
+
+    &__heart:hover {
+        .menu__effect {
+            &--op {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.btn-pink {
+    @include disJC;
+
+    &--exp {
+        @include disJC;
+        width: 200px;
+        height: $height;
+        border-radius: 25px;
+        background: linear-gradient(to left top, $primary, $secondary);
+        box-shadow: $shadow;
+        text-align: center;
+        color: #fff;
+        
+        &:hover {
+            background: linear-gradient(
+            to left top,
+            lighten($primary, 5%),
+            lighten($secondary, 5%)); 
+            box-shadow: 1px 3px 12px rgb(113, 113, 113); 
+        }
+    }
+}
+
+/*footer*/
+footer {
+    background-color: darken($grey, 30);
+}
+
+h3 {
+    padding: 20px 0 0 20px;
+    font-family: 'Shrikhand', cursive;
+    font-size: $size + 4px;
+}
+
+footer a,
+footer h3 {
+    color: #fff;
+}
+
+footer nav {
+    padding: 20px;
+    
+    li {
+        padding-bottom: 10px;
+    }
+    
+    i {
+        padding-right: 15px;
+    }
+}
+

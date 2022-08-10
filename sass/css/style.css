@@ -55,6 +55,10 @@ body {
 
 /*header*/
 header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   height: 70px;
 }
 
@@ -136,13 +140,11 @@ header,
   text-align: center;
   background: #f3f3f3;
 }
-
-h1 {
+.explore h1 {
   font-weight: bold;
   font-size: 21px;
 }
-
-p {
+.explore p {
   margin-bottom: 35px;
 }
 
@@ -166,25 +168,34 @@ p {
   color: #fff;
 }
 .btn-pink--exp:hover {
-  background: linear-gradient(to left top, #a674e2, #ff9de4);
+  background: linear-gradient(to left top, #a16be0, #ff93e1);
   box-shadow: 1px 3px 12px rgb(113, 113, 113);
 }
 
 /*Section functioning*/
+.functioning {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 .functioning h2 {
   width: 100%;
   font-size: 22px;
   font-weight: bold;
 }
-.functioning .btn {
+.functioning ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  counter-reset: numbers;
+}
+.functioning ol .btn {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-}
-.functioning .btn ol {
-  counter-reset: numbers;
 }
 
 .functioning li {
@@ -279,34 +290,38 @@ p {
 }
 
 .heart {
-  font-size: 30px;
-}
-.heart .front {
-  position: absolute;
-  top: 250px;
-  left: 720px;
-  cursor: pointer;
-}
-.heart .front:hover:active {
-  color: transparent;
-}
-.heart .behind {
-  position: absolute;
-  top: 250px;
-  left: 720px;
-  cursor: pointer;
-  transition-property: color;
-  transition: all 1s;
-  color: transparent;
-}
-.heart .behind:hover {
-  background: linear-gradient(to bottom, #9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
-  z-index: 2;
+  position: relative;
+  font-size: 1.875rem;
 }
 
-.one {
+.heart .front {
+  position: relative;
+  transition: all 0.5s ease-in;
+}
+
+.heart .behind {
+  opacity: 0;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(180deg, #FF79DA, #9356DC);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  transition: opacity 0.5s ease-out;
+}
+
+.heart:hover .front {
+  opacity: 0;
+  z-index: 0;
+}
+
+.heart:hover .behind {
+  opacity: 1;
   z-index: 1;
 }
 
@@ -322,7 +337,7 @@ h3 {
 }
 
 footer a,
-h3 {
+footer h3 {
   color: #fff;
 }
 

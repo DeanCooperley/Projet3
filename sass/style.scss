@@ -21,6 +21,7 @@ body {
 
 /*header*/
 header {
+    @include disJC;
     height: $height + 20px;
 }
     
@@ -92,15 +93,15 @@ header,
 .explore {
     text-align: center;
     background: lighten($grey, 45);
-}
     
-h1 {
-    font-weight: bold;
-    font-size: $size + 5;
-}
+    h1 {
+        font-weight: bold;
+        font-size: $size + 5;
+    }
 
-p {
-    margin-bottom: $down + 15;    
+    p {
+        margin-bottom: $down + 15;    
+    }
 }
 
 .btn-pink {
@@ -119,8 +120,8 @@ p {
         &:hover {
             background: linear-gradient(
             to left top,
-            lighten($primary, 7%),
-            lighten($secondary, 7%)); 
+            lighten($primary, 5%),
+            lighten($secondary, 5%)); 
             box-shadow: 1px 3px 12px rgb(113, 113, 113); 
         }
     }
@@ -128,6 +129,7 @@ p {
 
 /*Section functioning*/
 .functioning {
+    @include disJC;
 
     h2 {
         width: 100%;
@@ -135,12 +137,13 @@ p {
         font-weight: bold;
     }
 
-    .btn {
-        @include disJC;
-        font-weight: bold;
-        
-        ol {
-            counter-reset: numbers;
+    ol {
+        @include disC;
+        counter-reset: numbers;
+
+        .btn {
+            @include disJC;
+            font-weight: bold;
         }
     }
 }
@@ -232,34 +235,47 @@ p {
 }
 
 .heart {
-    font-size: 30px;
+    position: relative;
+    font-size: 1.875rem;
+}
 
-    .front {
-        @include heart;
+.heart .front {
+    // opacity: 1;
+    position: relative;
+    // z-index: 1;
+    transition: all 0.5s ease-in;
+}
 
-        &:hover:active {
-            color: transparent;
-        }
-    }
+
+.heart .behind {
+    opacity: 0;
+    position: absolute;
+    // z-index: 0;
+    top: 2px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(180deg, #FF79DA, #9356DC);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    // transition-delay: 0.5s;
+    transition: opacity 0.5s ease-out;
+}
+
     
-    .behind {
-        @include heart; 
-        transition-property: color;
-        transition: all 1s;
-        color: transparent;
+      
+      .heart:hover .front {
+        opacity: 0;
+        z-index: 0;
+      }
+      .heart:hover .behind {
+        opacity: 1;
+        z-index: 1;
+      }
 
-        &:hover {
-            background: linear-gradient(to bottom, $primary, $secondary);
-            background-clip: text;
-            -webkit-background-clip: text;
-            z-index: 2;
-        }
-    }
-}
-
-.one {
-    z-index: 1;
-}
 
 /*footer*/
 footer {
@@ -273,7 +289,7 @@ h3 {
 }
 
 footer a,
-h3 {
+footer h3 {
     color: #fff;
 }
 
