@@ -40,3 +40,25 @@
     height: 100%;
     object-fit: cover;
 }
+
+@mixin heart {
+    cursor: pointer;
+        display: inline-block;
+        position: absolute;
+        top: 267px;
+        right: 40px;
+        font-size: $size + 10px;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 400; 
+        content: "\f004";
+        opacity: 1;
+        background-image: linear-gradient(#FF79DA, #9356DC);
+        transition: all 300ms ease-in-out;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: inherit;
+}

@@ -51,9 +51,34 @@ header {
     border-radius: 35px 35px 0 0;
     position: relative;
     z-index: 1;
+    padding: 0 20px;
 
     &__title {
-        @include disC;
+        @include disCB;
+        height: $height + 70px;
+
+        &::before {
+            @include heart;
+            top: 50px;
+            right: 40px;
+        }
+    
+        &:hover::before {
+            color: transparent;
+        }
+    
+        &::after {
+            @include heart;
+            top: 50px;
+            right: 40px;
+            font-weight: 900;
+            opacity: 0;
+            color: transparent;
+        }
+    
+        &:hover::after {
+            opacity: 1;
+        }
 
         h2 {
             font-family: 'Shrikhand', cursive;
@@ -66,66 +91,46 @@ header {
     }
 
     h3 {
+        position: relative;
         font-family: 'Roboto', sans-serif;
         color: black;
-        position: relative;
+        padding: 0;
+        margin-bottom: 20px;
 
-        .ligne::before {
-            content: "";
-            display: block;
-            position: absolute;
-            border-bottom: 2px solid $tertiary;
-            left: 50%;           
-        }
-    }
-
-    &__heart {
-        @include disJC;
-        position: relative;
-        width: 32px;
-        height: 32px;
-        background-color: transparent;
-        background-color: black;
-        
-        &:hover::before {
-            opacity: 1;
-        }
-    
         &::before {
             content: "";
             position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
+            border-bottom: 3px solid $tertiary;
             left: 0;
-            opacity: 0;
-            background: linear-gradient(0deg, $primary 0%, $secondary 100%);
+            top: 27px;
+            width: 49px;
         }
-    }
-    
-    &__effect {
-        @include disJC;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        transition-duration: .25s;
-        background-color: lighten($grey, 45);
-        mix-blend-mode: lighten;
     }
 
-    &__heart:hover {
-        .menu__effect {
-            &--op {
-                opacity: 0;
-            }
+    &__text {
+        @include disCB;
+        margin-bottom: 20px;
+        padding: 15px 15px;
+        background-color: #fff;
+        border-radius: 15px;
+
+        &--one {
+            width: 100%;
+            font-size: $size + 4px;
+            font-weight: bold;
+            padding-bottom: 15px;
         }
-    }
+
+        &--three {
+            font-weight: bold;
+        }
+    }       
 }
 
+/*Bouton rose "commander"*/
 .btn-pink {
     @include disJC;
+    padding: 20px 0 70px 0;
 
     &--exp {
         @include disJC;
@@ -174,4 +179,3 @@ footer nav {
         padding-right: 15px;
     }
 }
-
