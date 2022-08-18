@@ -35,6 +35,10 @@ header {
         top: 4px;
         left: 20px;
         font-size: $size + 6px;
+
+        &:hover {
+            text-shadow: 1px 1px 5px rgb(107, 107, 107);
+        }
     }
 }
 
@@ -57,13 +61,14 @@ header {
         @include disCB;
         height: $height + 70px;
 
+        /*Effet dégradé au clic ou au survol du coeur*/
         &::before {
             @include heart;
             top: 50px;
             right: 40px;
         }
     
-        &:hover::before {
+        &:active::before {
             color: transparent;
         }
     
@@ -76,7 +81,7 @@ header {
             color: transparent;
         }
     
-        &:hover::after {
+        &:active::after {
             opacity: 1;
         }
 
@@ -108,23 +113,56 @@ header {
     }
 
     &__text {
-        @include disCB;
+        @include dis;
         margin-bottom: 20px;
-        padding: 15px 15px;
         background-color: #fff;
         border-radius: 15px;
+        overflow: hidden;
+        
+        &:hover .menu__text--icone {
+            margin-right: 0;
+            
+        }
 
-        &--one {
-            width: 100%;
+        &--one { 
+            @include dis;
+            flex-direction: column;
+            width: 70%;
             font-size: $size + 4px;
-            font-weight: bold;
-            padding-bottom: 15px;
+            padding: 15px;
+
+            & h4 {
+                font-weight: bold;
+            }
         }
 
-        &--three {
+        &--two {
+            display: flex;
+            align-items: flex-end;
+            margin-left: auto;
             font-weight: bold;
+            padding: 15px;
         }
-    }       
+            
+        &--icone {
+            @include disJC;
+            margin-right: -60px;
+            width: 60px;
+            background-color: $tertiary;
+            transition: margin-right 1s ease-in-out;
+            
+
+            & i {
+                display: inline-block;
+                @include disJC;
+                height: $height - 25;
+                width: 25px;
+                border-radius: 25px;
+                background-color: white;
+                color: $tertiary;
+            }
+        }   
+    }   
 }
 
 /*Bouton rose "commander"*/
