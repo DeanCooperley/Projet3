@@ -153,22 +153,21 @@ header {
         }
             
         &--icone {
-            @include disJC;       
+            @include disJC;   
+            flex-shrink: 0;    
             margin-right: -60px;
             width: 60px;
             background-color: $tertiary;
             transition: margin-right 0.3s ease-in-out;
 
             i {
-                display: inline-block;
+                // display: inline-block;
                 @include disJC;
                 height: $height - 25;
                 width: 25px;
                 border-radius: 25px;
                 background-color: white;
                 color: $tertiary;
-                white-space: nowrap;
-                overflow: hidden;
             }
         }   
     }   

@@ -228,13 +228,13 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   margin-right: -60px;
   width: 60px;
   background-color: #99E2D0;
   transition: margin-right 0.3s ease-in-out;
 }
 .menu__text--icone i {
-  display: inline-block;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -244,8 +244,6 @@ header {
   border-radius: 25px;
   background-color: white;
   color: #99E2D0;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 /*Bouton rose "commander"*/
