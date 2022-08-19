@@ -129,16 +129,17 @@ header {
         }
 
         &--one { 
-            @include dis;
+            display: flex;
             flex-direction: column;
             width: 70%;
             font-size: $size + 4px;
             padding: 15px;
+            overflow: hidden;
 
             h4, p {
+                text-overflow: ellipsis;
                 white-space: nowrap;
                 overflow: hidden;
-                text-overflow: ellipsis;
             }
 
             h4 {

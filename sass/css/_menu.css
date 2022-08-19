@@ -206,16 +206,16 @@ header {
 }
 .menu__text--one {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   width: 70%;
   font-size: 20px;
   padding: 15px;
+  overflow: hidden;
 }
 .menu__text--one h4, .menu__text--one p {
+  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 .menu__text--one h4 {
   font-weight: bold;
