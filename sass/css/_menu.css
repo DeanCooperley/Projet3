@@ -192,7 +192,6 @@ header {
 }
 .menu__text {
   display: flex;
-  flex-wrap: wrap;
   margin-bottom: 20px;
   background-color: #fff;
   border-radius: 15px;
@@ -205,12 +204,9 @@ header {
   animation: icone 0.4s ease-in-out;
 }
 .menu__text--one {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
+  overflow: hidden;
   font-size: 20px;
   padding: 15px;
-  overflow: hidden;
 }
 .menu__text--one h4, .menu__text--one p {
   text-overflow: ellipsis;
@@ -248,6 +244,8 @@ header {
   border-radius: 25px;
   background-color: white;
   color: #99E2D0;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 /*Bouton rose "commander"*/
