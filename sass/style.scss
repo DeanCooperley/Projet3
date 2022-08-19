@@ -113,15 +113,12 @@ header,
         height: $height;
         border-radius: 25px;
         background: linear-gradient(to left top, $primary, $secondary);
-        transform: scale(1);
-        // transition: transform 300ms;
         transition: transform 450ms, background-color 300ms 150ms;
         box-shadow: $shadow;
         text-align: center;
         color: #fff;
         
         &:hover {
-            transform: scale(1.05);
             background: linear-gradient(
             to left top,
             lighten($primary, 5%),

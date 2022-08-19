@@ -8,6 +8,7 @@ $base-font-size: 14px;
 @import "lib/variables.scss";
 @import "lib/mixins.scss";
 @import "lib/functions.scss";
+@import "lib/animations.scss";
 @import "lib/responsive.scss";
 
 body {
@@ -120,8 +121,11 @@ header {
         overflow: hidden;
         
         &:hover .menu__text--icone {
-            margin-right: 0;
+                margin-right: 0;
             
+            i {
+                animation: icone 0.4s ease-in-out;
+            }
         }
 
         &--one { 
@@ -131,7 +135,13 @@ header {
             font-size: $size + 4px;
             padding: 15px;
 
-            & h4 {
+            h4, p {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            h4 {
                 font-weight: bold;
             }
         }
@@ -149,10 +159,9 @@ header {
             margin-right: -60px;
             width: 60px;
             background-color: $tertiary;
-            transition: margin-right 1s ease-in-out;
-            
+            transition: margin-right 0.3s ease-in-out;
 
-            & i {
+            i {
                 display: inline-block;
                 @include disJC;
                 height: $height - 25;
