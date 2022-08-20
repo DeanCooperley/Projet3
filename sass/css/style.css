@@ -54,6 +54,38 @@ body {
   margin: auto;
 }
 
+/*loader*/
+.loader {
+  position: fixed;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  background-color: white;
+  opacity: 0.8;
+}
+.loader__infinity {
+  position: relative;
+  width: 312px;
+  height: 150px;
+  margin: 0 auto;
+}
+.loader__infinity::before, .loader__infinity::after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  width: 100px;
+  height: 100px;
+  border: 20px solid red;
+  border-radius: 90px 90px 0 90px;
+  transform: rotate(-45deg);
+}
+.loader__infinity::after {
+  left: 160px;
+  right: 0;
+  border-radius: 90px 90px 90px 0;
+  transform: rotate(45deg);
+}
+
 /*header*/
 header {
   display: flex;
