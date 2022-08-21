@@ -109,6 +109,7 @@ body {
 }
 .loader__letter {
   color: #FF79DA;
+  font-family: "Shrikhand", cursive;
   font-size: 80px;
   letter-spacing: 15px;
   animation: flash 0.8s linear infinite;
