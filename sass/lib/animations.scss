@@ -8,12 +8,39 @@
     }
 }
 
-@keyframes scroll {
+@keyframes loader {
     0% {
-        transform: scale(0);
+        transform: scale(1);
     }
 
     100% {
-        transform: scale(1);
+        transform: scale(0);
+    }
+}
+
+@keyframes flash {
+    0% {
+        color: #99E2D0;
+        text-shadow: 0 0 3px #99E2D0;
+    }
+
+    25% {
+        color: #99E2D0;
+        text-shadow: 0 0 3px #FF79DA;
+    }
+
+    50% {
+        color: #FF79DA;
+        text-shadow: 0 0 3px #FF79DA;
+    }
+
+    75% {
+        color: #FF79DA;
+        text-shadow: 0 0 3px #9356DC;
+    }
+
+    100% {
+        color: #9356DC;
+        text-shadow: 0 0 3px #9356DC;
     }
 }

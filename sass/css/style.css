@@ -45,6 +45,44 @@ table {
   border-spacing: 0;
 }
 
+@keyframes check {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes loader {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes flash {
+  0% {
+    color: #99E2D0;
+    text-shadow: 0 0 3px #99E2D0;
+  }
+  25% {
+    color: #99E2D0;
+    text-shadow: 0 0 3px #FF79DA;
+  }
+  50% {
+    color: #FF79DA;
+    text-shadow: 0 0 3px #FF79DA;
+  }
+  75% {
+    color: #FF79DA;
+    text-shadow: 0 0 3px #9356DC;
+  }
+  100% {
+    color: #9356DC;
+    text-shadow: 0 0 3px #9356DC;
+  }
+}
 body {
   background: #fff;
 }
@@ -57,33 +95,47 @@ body {
 /*loader*/
 .loader {
   position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   inset: 0;
+  background-color: rgb(54, 62, 57);
   z-index: 1;
-  background-color: white;
-  opacity: 0.8;
+  opacity: 0.9;
+  animation: loader 200ms 3s forwards;
+  transform-origin: top;
 }
-.loader__infinity {
-  position: relative;
-  width: 312px;
-  height: 150px;
-  margin: 0 auto;
+.loader__letter {
+  color: #FF79DA;
+  font-size: 80px;
+  letter-spacing: 15px;
+  animation: flash 0.8s linear infinite;
 }
-.loader__infinity::before, .loader__infinity::after {
-  content: "";
-  position: absolute;
-  left: 30px;
-  width: 100px;
-  height: 100px;
-  border: 20px solid red;
-  border-radius: 90px 90px 0 90px;
-  transform: rotate(-45deg);
+.loader__letter:nth-child(1) {
+  animation-delay: 0.1s;
 }
-.loader__infinity::after {
-  left: 160px;
-  right: 0;
-  border-radius: 90px 90px 90px 0;
-  transform: rotate(45deg);
+.loader__letter:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loader__letter:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.loader__letter:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.loader__letter:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.loader__letter:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.loader__letter:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.loader__letter:nth-child(8) {
+  animation-delay: 0.8s;
 }
 
 /*header*/
