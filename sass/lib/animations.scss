@@ -44,3 +44,16 @@
         text-shadow: 0 0 3px #9356DC;
     }
 }
+
+@keyframes scroll {
+    0% {
+        transform: translateY(30%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+

@@ -9,14 +9,13 @@ $base-font-size: 14px;
 @import "lib/mixins.scss";
 @import "lib/functions.scss";
 @import "lib/animations.scss";
-@import "lib/responsive.scss";
 
 body {
     background: #fff;
 }
 
 #blocPage{
-    max-width: 768px;
+    // max-width: 768px;
     margin: auto;
 }
 
@@ -123,10 +122,10 @@ header {
         border-radius: 15px;
         overflow: hidden;
         box-shadow: $shadow;
-        animation: scroll 3s;
-        
-        &:hover .menu__text--icone {
-                margin-right: 0;
+        animation: scroll 1.1s;
+
+        &:active .menu__text--icone {
+            margin-right: 0;
             
             i {
                 animation: check 0.5s ease-in-out;

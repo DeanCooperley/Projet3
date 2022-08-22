@@ -1,0 +1,68 @@
+@import "lib/minireset.scss";
+@import "lib/variables.scss";
+@import "lib/mixins.scss";
+@import "lib/functions.scss";
+@import "lib/animations.scss";
+
+/*Format tablette*/
+@media all and (min-width: 769px) {
+    .menu__set {
+        @include disJC;
+        width: 100%;
+    }
+    
+    .menu__text {
+        width: 40%;
+        margin-right: 20px;
+    }
+
+    .menu h3 {
+        @include disJC;
+
+        &::before {
+            position: relative;
+            left: 50px;
+            top: 15px;
+        }
+    }
+
+    footer h3{
+        @include disJC;
+    }
+
+    footer ul {
+        @include disB;
+    }
+}
+
+/*Format desktop*/
+@media all and (min-width: 993px) {
+    .one:hover::before {
+        color: transparent;
+    }
+
+    .one:hover::after {
+        opacity: 1;
+    }
+    
+    .menu__title:hover::before {
+        color: transparent;
+    }
+    
+    .menu__title:hover::after {
+        opacity: 1;
+    }
+    
+    .menu__text {
+        width: 30%;
+        animation: scroll 1.1s;
+
+        &:hover .menu__text--icone {
+            margin-right: 0;
+            
+            i {
+                animation: check 0.5s ease-in-out;
+            }
+        }
+    }
+}
