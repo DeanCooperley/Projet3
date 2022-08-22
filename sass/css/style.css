@@ -98,7 +98,7 @@ body {
 }
 
 #blocPage {
-  max-width: 768px;
+  min-width: 300px;
   margin: auto;
 }
 
@@ -120,7 +120,7 @@ body {
 .loader__letter {
   color: #FF79DA;
   font-family: "Shrikhand", cursive;
-  font-size: 80px;
+  font-size: 30px;
   letter-spacing: 15px;
   animation: flash 0.8s linear infinite;
 }
@@ -362,6 +362,12 @@ header,
   font-weight: bold;
 }
 
+.one-set {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 .one {
   display: flex;
   flex-wrap: wrap;
@@ -374,6 +380,7 @@ header,
 .one::before {
   cursor: pointer;
   display: inline-block;
+  position: relative;
   position: absolute;
   top: 267px;
   right: 40px;
@@ -398,6 +405,7 @@ header,
 .one::after {
   cursor: pointer;
   display: inline-block;
+  position: relative;
   position: absolute;
   top: 267px;
   right: 40px;

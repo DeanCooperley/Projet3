@@ -15,7 +15,7 @@ body {
 }
 
 #blocPage{
-    max-width: 768px;
+    min-width: 300px;
     margin: auto;
 }
 
@@ -34,7 +34,7 @@ body {
     &__letter {
         color: #FF79DA;
         font-family: 'Shrikhand', cursive;
-        font-size: 80px;
+        font-size: 30px;
         letter-spacing: 15px;
         animation: flash 0.8s linear infinite;
 
@@ -254,6 +254,11 @@ header,
         font-size: $size + 10px;
         font-weight: bold;
     }
+}
+
+.one-set {
+    @include dis;
+    width: 100%;
 }
 
 .one {

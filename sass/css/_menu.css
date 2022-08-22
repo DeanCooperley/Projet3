@@ -98,6 +98,7 @@ body {
 }
 
 #blocPage {
+  min-width: 300px;
   margin: auto;
 }
 
@@ -155,6 +156,7 @@ header {
 .menu__title::before {
   cursor: pointer;
   display: inline-block;
+  position: relative;
   position: absolute;
   top: 267px;
   right: 40px;
@@ -181,6 +183,7 @@ header {
 .menu__title::after {
   cursor: pointer;
   display: inline-block;
+  position: relative;
   position: absolute;
   top: 267px;
   right: 40px;

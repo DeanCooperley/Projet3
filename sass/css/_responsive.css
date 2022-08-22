@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -88,8 +89,25 @@ table {
     opacity: 1;
   }
 }
+/*Format intermédiaire*/
+@media all and (max-width: 345px) {
+  .menu__title::before,
+.menu__title::after {
+    right: 5px;
+  }
+}
 /*Format tablette*/
 @media all and (min-width: 769px) {
+  .functioning h2,
+.restaurant h2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .loader__letter {
+    font-size: 50px;
+  }
   .menu__set {
     display: flex;
     flex-wrap: wrap;
@@ -122,6 +140,12 @@ table {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+}
+/*Format intermédiaire*/
+@media all and (min-width: 899px) {
+  .one {
+    width: 50%;
   }
 }
 /*Format desktop*/

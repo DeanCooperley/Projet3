@@ -44,6 +44,7 @@
 @mixin heart {
     cursor: pointer;
     display: inline-block;
+    position: relative;
     position: absolute;
     top: 267px;
     right: 40px;
