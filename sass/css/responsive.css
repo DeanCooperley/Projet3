@@ -150,16 +150,16 @@ table {
 }
 /*Format desktop*/
 @media all and (min-width: 993px) {
-  .one:hover::before {
+  .one i:hover::before {
     color: transparent;
   }
-  .one:hover::after {
+  .one i:hover::after {
     opacity: 1;
   }
-  .menu__title:hover::before {
+  .menu__title i:hover::before {
     color: transparent;
   }
-  .menu__title:hover::after {
+  .menu__title i:hover::after {
     opacity: 1;
   }
   .menu__text {
@@ -174,4 +174,4 @@ table {
   }
 }
 
-/*# sourceMappingURL=_responsive.css.map */
+/*# sourceMappingURL=responsive.css.map */

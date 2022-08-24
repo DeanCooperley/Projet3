@@ -153,10 +153,9 @@ header {
   height: 120px;
   /*Effet dégradé au clic ou au survol du coeur*/
 }
-.menu__title::before {
+.menu__title i::before {
   cursor: pointer;
   display: inline-block;
-  position: relative;
   position: absolute;
   top: 267px;
   right: 40px;
@@ -166,24 +165,19 @@ header {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
-  font-weight: 400;
   content: "\f004";
-  opacity: 1;
   background-image: linear-gradient(#FF79DA, #9356DC);
   transition: all 200ms ease-in-out;
-  background-clip: text;
   -webkit-background-clip: text;
-  color: inherit;
   top: 50px;
   right: 40px;
 }
-.menu__title:active::before {
+.menu__title i:active::before {
   color: transparent;
 }
-.menu__title::after {
+.menu__title i::after {
   cursor: pointer;
   display: inline-block;
-  position: relative;
   position: absolute;
   top: 267px;
   right: 40px;
@@ -193,21 +187,17 @@ header {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
-  font-weight: 400;
   content: "\f004";
-  opacity: 1;
   background-image: linear-gradient(#FF79DA, #9356DC);
   transition: all 200ms ease-in-out;
-  background-clip: text;
   -webkit-background-clip: text;
-  color: inherit;
   top: 50px;
   right: 40px;
   font-weight: 900;
   opacity: 0;
   color: transparent;
 }
-.menu__title:active::after {
+.menu__title i:active::after {
   opacity: 1;
 }
 .menu__title h2 {
@@ -345,4 +335,4 @@ footer nav i {
   padding-right: 15px;
 }
 
-/*# sourceMappingURL=_menu.css.map */
+/*# sourceMappingURL=menu.css.map */

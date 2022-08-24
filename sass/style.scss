@@ -26,7 +26,7 @@ body {
     height: 100vh;
     inset: 0;
     background-color: rgb(54, 62, 57);
-    z-index: 1;
+    z-index: 2;
     opacity: 0.9;
     animation: loader 200ms 3s forwards;
     transform-origin: top;
@@ -268,22 +268,22 @@ header,
     padding: 20px;
 
     /*Effet dégradé au clic ou au survol du coeur*/
-    &::before {
+    & i::before {
         @include heart;
     }
-
-    &:active::before {
+    
+    & i:active::before {
         color: transparent;
     }
-
-    &::after {
+    
+    & i::after {
         @include heart;
         font-weight: 900;
         opacity: 0;
         color: transparent;
     }
-
-    &:active::after {
+    
+    & i:active::after {
         opacity: 1;
     }
 
