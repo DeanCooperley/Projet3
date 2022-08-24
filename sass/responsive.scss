@@ -6,9 +6,8 @@
 
 /*Format intermédiaire*/
 @media all and (max-width: 345px) {
-    .menu__title::before,
-    .menu__title::after {
-        right: 5px;
+    .menu__title h2{
+        width: 70%;
     }
 }
 
