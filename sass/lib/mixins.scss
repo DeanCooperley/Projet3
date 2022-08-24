@@ -53,14 +53,10 @@
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     font-family: "Font Awesome 5 Free"; 
-    // font-weight: 400; 
     content: "\f004";
-    // opacity: 1;
     background-image: linear-gradient(#FF79DA, #9356DC);
     transition: all 200ms ease-in-out;
-    // background-clip: text;
     -webkit-background-clip: text;
-    // color: inherit;
 }
 
 @mixin check {
