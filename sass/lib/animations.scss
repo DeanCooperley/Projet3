@@ -1,13 +1,4 @@
-@keyframes check {
-    0% {
-        transform: rotate(-360deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
-}
-
+//Animations du loader incluant flash
 @keyframes loader {
     0% {
         transform: scale(1);
@@ -45,6 +36,18 @@
     }
 }
 
+//Animation de l'icône check
+@keyframes check {
+    0% {
+        transform: rotate(-360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+//Animation du bas vers le haut des plats
 @keyframes scroll {
     0% {
         transform: translateY(30%);

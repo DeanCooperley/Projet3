@@ -45,14 +45,6 @@ table {
   border-spacing: 0;
 }
 
-@keyframes check {
-  0% {
-    transform: rotate(-360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
 @keyframes loader {
   0% {
     transform: scale(1);
@@ -81,6 +73,14 @@ table {
   100% {
     color: #9356DC;
     text-shadow: 0 0 3px #9356DC;
+  }
+}
+@keyframes check {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 @keyframes scroll {
