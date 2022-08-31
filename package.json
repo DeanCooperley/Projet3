@@ -1,0 +1,23 @@
+{
+  "name": "projet3",
+  "version": "1.0.0",
+  "description": "Création d'un site responsive, pour l'entreprise ohmyfood, destiné aux particuliers qui souhaitent se composer un menu et venir se restaurer sans perdre de temps.",
+  "main": "index.js",
+  "scripts": {
+    "watch-style": "./dart-sass/sass sass/style.scss sass/css/style.css --watch --style compressed",
+    "watch-menu": "./dart-sass/sass sass/menu.scss sass/css/menu.css --watch --style compressed",
+    "watch-responsive": "./dart-sass/sass sass/responsive.scss sass/css/responsive.css --watch --style compressed",
+    "prefix": "postcss ./sass/css/style.css --use autoprefixer -d ./sass/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeanCooperley/Projet3.git"
+  },
+  "author": "Dean Cooperley",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/DeanCooperley/Projet3/issues"
+  },
+  "homepage": "https://github.com/DeanCooperley/Projet3#readme"
+}
