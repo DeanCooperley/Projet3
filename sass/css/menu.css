@@ -45,6 +45,7 @@ table {
   border-spacing: 0;
 }
 
+/*Fonction permettant de convertir 1rem en 16px*/
 @keyframes loader {
   0% {
     transform: scale(1);

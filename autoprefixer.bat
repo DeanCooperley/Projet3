@@ -1,0 +1,1 @@
+postcss ./sass/css/style.css --use autoprefixer -d ./sass/css/prefixed/
