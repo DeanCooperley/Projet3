@@ -1,1 +1,1 @@
-./dart-sass/sass sass/menu.scss sass/css/menu.css --watch
+./dart-sass/sass sass/menu.scss sass/css/menu.css --watch --style compressed

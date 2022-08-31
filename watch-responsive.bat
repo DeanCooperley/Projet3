@@ -1,1 +1,1 @@
-./dart-sass/sass sass/responsive.scss sass/css/responsive.css --watch
+./dart-sass/sass sass/responsive.scss sass/css/responsive.css --watch --style compressed
